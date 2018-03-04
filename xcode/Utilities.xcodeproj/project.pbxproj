@@ -7,8 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EDA0FDD32048CEEA00243788 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDA0FDD22048CEEA00243788 /* main.cpp */; };
+		ED174A5A2048D9C7008CA7A8 /* UniquePointer.h in Sources */ = {isa = PBXBuildFile; fileRef = ED174A582048D9B2008CA7A8 /* UniquePointer.h */; };
+		ED174A5B2048D9C7008CA7A8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED174A592048D9B2008CA7A8 /* main.cpp */; };
+		EDFF7151204BA32100FACF34 /* libgmock_maind.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFF714B204BA31100FACF34 /* libgmock_maind.a */; };
+		EDFF7152204BA32100FACF34 /* libgmockd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFF7149204BA31100FACF34 /* libgmockd.a */; };
+		EDFF7153204BA32100FACF34 /* libgtest_maind.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFF714F204BA31100FACF34 /* libgtest_maind.a */; };
+		EDFF7154204BA32100FACF34 /* libgtestd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFF714D204BA31100FACF34 /* libgtestd.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EDFF7148204BA31100FACF34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDFF713D204BA31100FACF34 /* googletest-distribution.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 736745EA24694A22A35C3C9C;
+			remoteInfo = gmock;
+		};
+		EDFF714A204BA31100FACF34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDFF713D204BA31100FACF34 /* googletest-distribution.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 54E82F7739EC4D359B5141E4;
+			remoteInfo = gmock_main;
+		};
+		EDFF714C204BA31100FACF34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDFF713D204BA31100FACF34 /* googletest-distribution.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BE5D64ADD9D2438B9967F0F6;
+			remoteInfo = gtest;
+		};
+		EDFF714E204BA31100FACF34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDFF713D204BA31100FACF34 /* googletest-distribution.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 808150F770F843D0BDC149D4;
+			remoteInfo = gtest_main;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		EDA0FDCD2048CEE900243788 /* CopyFiles */ = {
@@ -23,8 +59,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ED174A582048D9B2008CA7A8 /* UniquePointer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UniquePointer.h; sourceTree = "<group>"; };
+		ED174A592048D9B2008CA7A8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EDA0FDCF2048CEEA00243788 /* Utilities */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Utilities; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDA0FDD22048CEEA00243788 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EDFF713D204BA31100FACF34 /* googletest-distribution.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "googletest-distribution.xcodeproj"; path = "../third-party/googletest/xcode/googletest-distribution.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,17 +70,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDFF7151204BA32100FACF34 /* libgmock_maind.a in Frameworks */,
+				EDFF7152204BA32100FACF34 /* libgmockd.a in Frameworks */,
+				EDFF7153204BA32100FACF34 /* libgtest_maind.a in Frameworks */,
+				EDFF7154204BA32100FACF34 /* libgtestd.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED174A572048D9B2008CA7A8 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				ED174A582048D9B2008CA7A8 /* UniquePointer.h */,
+				ED174A592048D9B2008CA7A8 /* main.cpp */,
+			);
+			name = src;
+			path = ../src;
+			sourceTree = "<group>";
+		};
+		ED174A5E2048DAC0008CA7A8 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = tests;
+			path = ../tests;
+			sourceTree = "<group>";
+		};
 		EDA0FDC62048CEE900243788 = {
 			isa = PBXGroup;
 			children = (
-				EDA0FDD12048CEEA00243788 /* src */,
+				EDFF713D204BA31100FACF34 /* googletest-distribution.xcodeproj */,
+				ED174A5E2048DAC0008CA7A8 /* tests */,
+				ED174A572048D9B2008CA7A8 /* src */,
 				EDA0FDD02048CEEA00243788 /* Products */,
+				EDFF7150204BA32100FACF34 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,13 +117,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EDA0FDD12048CEEA00243788 /* src */ = {
+		EDFF713E204BA31100FACF34 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EDA0FDD22048CEEA00243788 /* main.cpp */,
+				EDFF7149204BA31100FACF34 /* libgmockd.a */,
+				EDFF714B204BA31100FACF34 /* libgmock_maind.a */,
+				EDFF714D204BA31100FACF34 /* libgtestd.a */,
+				EDFF714F204BA31100FACF34 /* libgtest_maind.a */,
 			);
-			name = src;
-			path = ../src;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDFF7150204BA32100FACF34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,6 +179,12 @@
 			mainGroup = EDA0FDC62048CEE900243788;
 			productRefGroup = EDA0FDD02048CEEA00243788 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EDFF713E204BA31100FACF34 /* Products */;
+					ProjectRef = EDFF713D204BA31100FACF34 /* googletest-distribution.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				EDA0FDCE2048CEE900243788 /* Utilities */,
@@ -114,12 +192,44 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		EDFF7149204BA31100FACF34 /* libgmockd.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libgmockd.a;
+			remoteRef = EDFF7148204BA31100FACF34 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EDFF714B204BA31100FACF34 /* libgmock_maind.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libgmock_maind.a;
+			remoteRef = EDFF714A204BA31100FACF34 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EDFF714D204BA31100FACF34 /* libgtestd.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libgtestd.a;
+			remoteRef = EDFF714C204BA31100FACF34 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EDFF714F204BA31100FACF34 /* libgtest_maind.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libgtest_maind.a;
+			remoteRef = EDFF714E204BA31100FACF34 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EDA0FDCB2048CEE900243788 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDA0FDD32048CEEA00243788 /* main.cpp in Sources */,
+				ED174A5A2048D9C7008CA7A8 /* UniquePointer.h in Sources */,
+				ED174A5B2048D9C7008CA7A8 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,8 +275,8 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"GTEST_ROOT=$(PROJECT_DIR)/../third-party/googletest/googletest/",
 					"DEBUG=1",
-					"$(inherited)",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -174,10 +284,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../third-party/googletest/googletest/include";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../src";
 			};
 			name = Debug;
 		};
@@ -217,15 +329,18 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "GTEST_ROOT=$(PROJECT_DIR)/../third-party/googletest/googletest/";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../third-party/googletest/googletest/include";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../src";
 			};
 			name = Release;
 		};
