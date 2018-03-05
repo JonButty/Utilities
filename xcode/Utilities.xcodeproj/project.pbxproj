@@ -13,6 +13,12 @@
 		EDFF7152204BA32100FACF34 /* libgmockd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFF7149204BA31100FACF34 /* libgmockd.a */; };
 		EDFF7153204BA32100FACF34 /* libgtest_maind.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFF714F204BA31100FACF34 /* libgtest_maind.a */; };
 		EDFF7154204BA32100FACF34 /* libgtestd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFF714D204BA31100FACF34 /* libgtestd.a */; };
+		EDFF715A204BAD9A00FACF34 /* UniquePointer.h in Sources */ = {isa = PBXBuildFile; fileRef = ED174A582048D9B2008CA7A8 /* UniquePointer.h */; };
+		EDFF715B204BAD9A00FACF34 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED174A592048D9B2008CA7A8 /* main.cpp */; };
+		EDFF715D204BAD9A00FACF34 /* libgmock_maind.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFF714B204BA31100FACF34 /* libgmock_maind.a */; };
+		EDFF715E204BAD9A00FACF34 /* libgmockd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFF7149204BA31100FACF34 /* libgmockd.a */; };
+		EDFF715F204BAD9A00FACF34 /* libgtest_maind.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFF714F204BA31100FACF34 /* libgtest_maind.a */; };
+		EDFF7160204BAD9A00FACF34 /* libgtestd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFF714D204BA31100FACF34 /* libgtestd.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +62,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		EDFF7161204BAD9A00FACF34 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +78,9 @@
 		ED174A592048D9B2008CA7A8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EDA0FDCF2048CEEA00243788 /* Utilities */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Utilities; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDFF713D204BA31100FACF34 /* googletest-distribution.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "googletest-distribution.xcodeproj"; path = "../third-party/googletest/xcode/googletest-distribution.xcodeproj"; sourceTree = "<group>"; };
+		EDFF7157204BAD7100FACF34 /* main-test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "main-test.h"; sourceTree = "<group>"; };
+		EDFF7165204BAD9A00FACF34 /* Utilities-Test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Utilities-Test"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDFF7167204BAFB300FACF34 /* UniquePointer-test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UniquePointer-test.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +92,17 @@
 				EDFF7152204BA32100FACF34 /* libgmockd.a in Frameworks */,
 				EDFF7153204BA32100FACF34 /* libgtest_maind.a in Frameworks */,
 				EDFF7154204BA32100FACF34 /* libgtestd.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDFF715C204BAD9A00FACF34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDFF715D204BAD9A00FACF34 /* libgmock_maind.a in Frameworks */,
+				EDFF715E204BAD9A00FACF34 /* libgmockd.a in Frameworks */,
+				EDFF715F204BAD9A00FACF34 /* libgtest_maind.a in Frameworks */,
+				EDFF7160204BAD9A00FACF34 /* libgtestd.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +122,8 @@
 		ED174A5E2048DAC0008CA7A8 /* tests */ = {
 			isa = PBXGroup;
 			children = (
+				EDFF7157204BAD7100FACF34 /* main-test.h */,
+				EDFF7167204BAFB300FACF34 /* UniquePointer-test.h */,
 			);
 			name = tests;
 			path = ../tests;
@@ -113,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				EDA0FDCF2048CEEA00243788 /* Utilities */,
+				EDFF7165204BAD9A00FACF34 /* Utilities-Test */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,6 +187,23 @@
 			productReference = EDA0FDCF2048CEEA00243788 /* Utilities */;
 			productType = "com.apple.product-type.tool";
 		};
+		EDFF7158204BAD9A00FACF34 /* Utilities-Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDFF7162204BAD9A00FACF34 /* Build configuration list for PBXNativeTarget "Utilities-Test" */;
+			buildPhases = (
+				EDFF7159204BAD9A00FACF34 /* Sources */,
+				EDFF715C204BAD9A00FACF34 /* Frameworks */,
+				EDFF7161204BAD9A00FACF34 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Utilities-Test";
+			productName = Utilities;
+			productReference = EDFF7165204BAD9A00FACF34 /* Utilities-Test */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,6 +214,9 @@
 				TargetAttributes = {
 					EDA0FDCE2048CEE900243788 = {
 						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					EDFF7158204BAD9A00FACF34 = {
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -188,6 +240,7 @@
 			projectRoot = "";
 			targets = (
 				EDA0FDCE2048CEE900243788 /* Utilities */,
+				EDFF7158204BAD9A00FACF34 /* Utilities-Test */,
 			);
 		};
 /* End PBXProject section */
@@ -233,6 +286,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EDFF7159204BAD9A00FACF34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDFF715A204BAD9A00FACF34 /* UniquePointer.h in Sources */,
+				EDFF715B204BAD9A00FACF34 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -274,10 +336,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"GTEST_ROOT=$(PROJECT_DIR)/../third-party/googletest/googletest/",
-					"DEBUG=1",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -289,7 +348,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../src";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../src $(PROJECT_DIR)/../tests";
 			};
 			name = Debug;
 		};
@@ -329,7 +388,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = "GTEST_ROOT=$(PROJECT_DIR)/../third-party/googletest/googletest/";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -340,7 +399,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../src";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../src $(PROJECT_DIR)/../tests";
 			};
 			name = Release;
 		};
@@ -349,6 +408,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QY3GTZ5J5F;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"GTEST_ROOT=$(PROJECT_DIR)/../third-party/googletest/googletest/",
+					"UNIT_TESTS=1",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -358,6 +422,39 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QY3GTZ5J5F;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"GTEST_ROOT=$(PROJECT_DIR)/../third-party/googletest/googletest/",
+					"UNIT_TESTS=1",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EDFF7163204BAD9A00FACF34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QY3GTZ5J5F;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"GTEST_ROOT=$(PROJECT_DIR)/../third-party/googletest/googletest/",
+					"UNIT_TESTS=1",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EDFF7164204BAD9A00FACF34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QY3GTZ5J5F;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"GTEST_ROOT=$(PROJECT_DIR)/../third-party/googletest/googletest/",
+					"UNIT_TESTS=1",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -379,6 +476,15 @@
 			buildConfigurations = (
 				EDA0FDD72048CEEA00243788 /* Debug */,
 				EDA0FDD82048CEEA00243788 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDFF7162204BAD9A00FACF34 /* Build configuration list for PBXNativeTarget "Utilities-Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDFF7163204BAD9A00FACF34 /* Debug */,
+				EDFF7164204BAD9A00FACF34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

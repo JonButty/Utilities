@@ -5,18 +5,14 @@
 //  Created by Jonathan Butt on 3/1/18.
 //
 
-#include "gtest/gtest.h"
-#include "UniquePointer.h"
 #include <iostream>
 
+#ifdef UNIT_TESTS
+#include "main-test.h"
+#else
 int main(int argc, char **argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
+    return 0;
 }
 
-TEST(SimpleTest, UniquePointerTest) {
-    std::cout << "Test0" << std::endl;
-    UniquePointer<int> ptr(1);
-    
-    EXPECT_EQ(*ptr,1);
-}
+#endif
+
