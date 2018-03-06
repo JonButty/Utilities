@@ -1,4 +1,5 @@
 #include "UniquePointer-test.h"
+#include "Singleton-test.h"
 
 #include <gtest/gtest.h>
 

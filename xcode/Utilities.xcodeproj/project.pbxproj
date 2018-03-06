@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		ED174A5A2048D9C7008CA7A8 /* UniquePointer.h in Sources */ = {isa = PBXBuildFile; fileRef = ED174A582048D9B2008CA7A8 /* UniquePointer.h */; };
 		ED174A5B2048D9C7008CA7A8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED174A592048D9B2008CA7A8 /* main.cpp */; };
+		ED54B3AB204E30F500F8C09D /* Singleton-test.h in Sources */ = {isa = PBXBuildFile; fileRef = ED54B3AA204E30F500F8C09D /* Singleton-test.h */; };
 		EDFF7151204BA32100FACF34 /* libgmock_maind.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFF714B204BA31100FACF34 /* libgmock_maind.a */; };
 		EDFF7152204BA32100FACF34 /* libgmockd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFF7149204BA31100FACF34 /* libgmockd.a */; };
 		EDFF7153204BA32100FACF34 /* libgtest_maind.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFF714F204BA31100FACF34 /* libgtest_maind.a */; };
@@ -76,6 +77,8 @@
 /* Begin PBXFileReference section */
 		ED174A582048D9B2008CA7A8 /* UniquePointer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UniquePointer.h; sourceTree = "<group>"; };
 		ED174A592048D9B2008CA7A8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		ED54B39E204E305300F8C09D /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		ED54B3AA204E30F500F8C09D /* Singleton-test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Singleton-test.h"; sourceTree = "<group>"; };
 		EDA0FDCF2048CEEA00243788 /* Utilities */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Utilities; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDFF713D204BA31100FACF34 /* googletest-distribution.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "googletest-distribution.xcodeproj"; path = "../third-party/googletest/xcode/googletest-distribution.xcodeproj"; sourceTree = "<group>"; };
 		EDFF7157204BAD7100FACF34 /* main-test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "main-test.h"; sourceTree = "<group>"; };
@@ -112,6 +115,7 @@
 		ED174A572048D9B2008CA7A8 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				ED54B39E204E305300F8C09D /* Singleton.h */,
 				ED174A582048D9B2008CA7A8 /* UniquePointer.h */,
 				ED174A592048D9B2008CA7A8 /* main.cpp */,
 			);
@@ -124,6 +128,7 @@
 			children = (
 				EDFF7157204BAD7100FACF34 /* main-test.h */,
 				EDFF7167204BAFB300FACF34 /* UniquePointer-test.h */,
+				ED54B3AA204E30F500F8C09D /* Singleton-test.h */,
 			);
 			name = tests;
 			path = ../tests;
@@ -292,6 +297,7 @@
 			files = (
 				EDFF715A204BAD9A00FACF34 /* UniquePointer.h in Sources */,
 				EDFF715B204BAD9A00FACF34 /* main.cpp in Sources */,
+				ED54B3AB204E30F500F8C09D /* Singleton-test.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
