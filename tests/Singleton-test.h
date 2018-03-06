@@ -34,7 +34,6 @@ TEST(SINGLETON_TESTS, GetValue)
     EXPECT_EQ(TestSingletonClass::getInstance().GetIntVal(),5);
 }
 
-// Should this not be allowed?
 TEST(SINGLETON_TESTS, MultipleInstances)
 {
     TestSingletonClass::getInstance().SetIntVal(5);

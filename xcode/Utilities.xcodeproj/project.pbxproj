@@ -10,10 +10,6 @@
 		ED174A5A2048D9C7008CA7A8 /* UniquePointer.h in Sources */ = {isa = PBXBuildFile; fileRef = ED174A582048D9B2008CA7A8 /* UniquePointer.h */; };
 		ED174A5B2048D9C7008CA7A8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED174A592048D9B2008CA7A8 /* main.cpp */; };
 		ED54B3AB204E30F500F8C09D /* Singleton-test.h in Sources */ = {isa = PBXBuildFile; fileRef = ED54B3AA204E30F500F8C09D /* Singleton-test.h */; };
-		EDFF7151204BA32100FACF34 /* libgmock_maind.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFF714B204BA31100FACF34 /* libgmock_maind.a */; };
-		EDFF7152204BA32100FACF34 /* libgmockd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFF7149204BA31100FACF34 /* libgmockd.a */; };
-		EDFF7153204BA32100FACF34 /* libgtest_maind.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFF714F204BA31100FACF34 /* libgtest_maind.a */; };
-		EDFF7154204BA32100FACF34 /* libgtestd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFF714D204BA31100FACF34 /* libgtestd.a */; };
 		EDFF715A204BAD9A00FACF34 /* UniquePointer.h in Sources */ = {isa = PBXBuildFile; fileRef = ED174A582048D9B2008CA7A8 /* UniquePointer.h */; };
 		EDFF715B204BAD9A00FACF34 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED174A592048D9B2008CA7A8 /* main.cpp */; };
 		EDFF715D204BAD9A00FACF34 /* libgmock_maind.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFF714B204BA31100FACF34 /* libgmock_maind.a */; };
@@ -91,10 +87,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDFF7151204BA32100FACF34 /* libgmock_maind.a in Frameworks */,
-				EDFF7152204BA32100FACF34 /* libgmockd.a in Frameworks */,
-				EDFF7153204BA32100FACF34 /* libgtest_maind.a in Frameworks */,
-				EDFF7154204BA32100FACF34 /* libgtestd.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,11 +406,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QY3GTZ5J5F;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"GTEST_ROOT=$(PROJECT_DIR)/../third-party/googletest/googletest/",
-					"UNIT_TESTS=1",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -428,11 +416,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QY3GTZ5J5F;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"GTEST_ROOT=$(PROJECT_DIR)/../third-party/googletest/googletest/",
-					"UNIT_TESTS=1",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
