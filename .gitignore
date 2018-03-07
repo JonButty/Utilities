@@ -1,0 +1,13 @@
+*.suo
+*.user
+*.filters
+.vs/
+Debug/
+*.obj
+*.exe
+*.iobj
+*.ipdb
+*.log
+*.pdb
+*.tlog
+visualstudio/Win32-Release/
