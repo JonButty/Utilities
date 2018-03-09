@@ -11,3 +11,6 @@ Debug/
 *.pdb
 *.tlog
 visualstudio/Win32-Release/
+*.testdurations
+visualstudio/test-debug/
+visualstudio/Win32-Debug/
