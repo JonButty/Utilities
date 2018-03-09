@@ -18,3 +18,5 @@ visualstudio/Debug/
 visualstudio/Release/
 Debug/
 Release/
+*.opendb
+*.db
